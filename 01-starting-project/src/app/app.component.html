@@ -11,6 +11,15 @@
     <li>
       <app-user [avatar]="users[2].avatar" [name]="users[2].name" [id]="users[2].id" (select)="onUserSelected($event)"></app-user>
     </li>
+    <li>
+      <app-user [avatar]="users[3].avatar" [name]="users[3].name" [id]="users[3].id" (select)="onUserSelected($event)"></app-user>
+    </li>
+    <li>
+      <app-user [avatar]="users[4].avatar" [name]="users[4].name" [id]="users[4].id" (select)="onUserSelected($event)"></app-user>
+    </li>
+    <li>
+      <app-user [avatar]="users[5].avatar" [name]="users[5].name" [id]="users[5].id" (select)="onUserSelected($event)"></app-user>
+    </li>
     
   </ul>
   <app-tasks [name]="selectedUser.name"></app-tasks>

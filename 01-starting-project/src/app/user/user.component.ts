@@ -14,7 +14,7 @@ export class UserComponent {
   @Input({required: true}) avatar!: string;
   @Input({required: true}) name!: string; 
   @Input({required: true}) id!: string;
-  @Output() select = new EventEmitter<string>();
+  @Output() abc = new EventEmitter<string>();
 
   // imagePath = computed( () =>
   // {
@@ -26,7 +26,7 @@ export class UserComponent {
 
   onSelectUser()
   {
-    this.select.emit(this.id);
+    this.abc.emit(this.id);
   }
 
 }

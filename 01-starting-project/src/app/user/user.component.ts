@@ -11,6 +11,7 @@ export class UserComponent {
   // avatar = input.required<string>();
   // name = input.required<string>();
   @Input({ required: true }) user!: User;
+  @Input ({required: true}) isSelected! : boolean;
   @Output() abc = new EventEmitter<string>();
 
   // imagePath = computed( () =>

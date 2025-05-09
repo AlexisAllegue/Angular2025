@@ -44,4 +44,9 @@ export class TasksComponent {
     return this.dummyTasks.filter((task) => task.userId === this.userId);
   }
 
+  onTaskCompleted(id: string)
+  {
+
+  }
+
 }

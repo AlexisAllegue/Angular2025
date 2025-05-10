@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TaskComponent } from './task/task.component'
 import { NewTaskComponent } from "./new-task/new-task.component";
+import { NewTask } from './task/task.model';
 @Component({
   selector: 'app-tasks',
   standalone: true,
@@ -42,8 +43,6 @@ export class TasksComponent {
     return this.dummyTasks.filter((task) => task.userId === this.userId);
   }
 
-
-
   onTaskCompleted(id: string) {
     this.dummyTasks = this.dummyTasks.filter((x) => x.id !== id);
   }
@@ -54,7 +53,19 @@ export class TasksComponent {
 
   onAddTaskCanceled() {
     this.isAddTask = false;
-      
   }
 
+  onAddTaskSubmitted(newTask: NewTask)
+  {
+    this.dummyTasks.unshift(
+      {
+        id: new Date().getTime().toString(),
+        title: newTask.title,
+        summary: newTask.summary,
+        dueDate: newTask.dueDate,
+        userId: this.userId
+      }
+    );
+    this.isAddTask = false;
+  }
 }

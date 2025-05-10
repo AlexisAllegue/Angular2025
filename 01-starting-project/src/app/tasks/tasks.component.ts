@@ -37,16 +37,24 @@ export class TasksComponent {
       dueDate: '2024-06-15',
     },
   ]
-  onAddTask() {
-    this.isAddTask = true;
-  }
+
   get selectedUserTasks() {
     return this.dummyTasks.filter((task) => task.userId === this.userId);
   }
 
-  onTaskCompleted(id: string)
-  {
-    this.dummyTasks = this.dummyTasks.filter((x)=> x.userId !== this.userId);
+
+
+  onTaskCompleted(id: string) {
+    this.dummyTasks = this.dummyTasks.filter((x) => x.userId !== this.userId);
+  }
+
+  onAddTask() {
+    this.isAddTask = true;
+  }
+
+  onAddTaskCanceled() {
+    this.isAddTask = false;
+      
   }
 
 }

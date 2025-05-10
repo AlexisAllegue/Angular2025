@@ -46,7 +46,7 @@ export class TasksComponent {
 
   onTaskCompleted(id: string)
   {
-
+    this.dummyTasks = this.dummyTasks.filter((x)=> x.userId !== this.userId);
   }
 
 }

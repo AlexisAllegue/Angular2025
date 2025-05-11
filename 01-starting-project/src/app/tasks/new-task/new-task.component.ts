@@ -28,12 +28,6 @@ onCancelButtonClick()
 
 onSubmitButtonClick()
 {
-  // this.submitted.emit({
-  //   title: this.newTaskTitle,
-  //   summary: this.newTaskSummary,
-  //   dueDate: this.newTaskDueDate
-  // });
-
   this.tasksService.addUserTask(this.userId, {
     title: this.newTaskTitle,
     summary: this.newTaskSummary,

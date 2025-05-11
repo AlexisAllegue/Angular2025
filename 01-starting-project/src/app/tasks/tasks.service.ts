@@ -30,7 +30,7 @@ export class TasksService {
     ]
 
     getUserTasks(userId: string) {
-        this.dummyTasks.filter((x) => x.userId === userId);
+        return this.dummyTasks.filter((x) => x.userId === userId);
     }
 
     deleteUserTask(taskId: string) {
